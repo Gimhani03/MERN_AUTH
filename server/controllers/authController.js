@@ -145,7 +145,7 @@ export const verifyEmail = async (req,res) => {
         if(user.verifyOtpExpiredAt < Date.now()){
             return res.json({success:false, message:'OTP Expired'});
         }
-        user.isAcountVerified = true;
+        user.isAccountVerified = true;
         user.verifyOtp = '';
         user.verifyOtpExpiredAt = 0;
 
